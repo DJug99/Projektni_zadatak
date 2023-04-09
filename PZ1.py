@@ -1,5 +1,4 @@
-import datetime
-
+from datetime import date
 # unos korisnikovih podataka
 ime = input("Unesite ime korisnika: ").capitalize()
 prezime = input("Unesite prezime korisnika: ").capitalize()
@@ -33,7 +32,7 @@ godina = int(input("Unesite godinu isteka prodaje: "))
 
 # spremanje podataka o prodaji u rječnik
 prodaja = {
-    "datum": datetime.date(godina, mjesec, dan),
+    "datum": date(godina, mjesec, dan),
     "artikl": artikl,
     "korisnik": korisnik
 }
@@ -51,6 +50,7 @@ print("Informacije o korisniku:")
 print(prodaja["korisnik"]["ime"], prodaja["korisnik"]["prezime"])
 print("Telefon:", prodaja["korisnik"]["telefon"])
 print("Email:", prodaja["korisnik"]["email"])
+
 
 
 
